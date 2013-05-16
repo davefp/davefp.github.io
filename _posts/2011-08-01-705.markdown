@@ -1,0 +1,22 @@
+---
+comments: true
+date: 2011-08-01 10:00:03
+layout: post
+slug: '705'
+title: The Flying Developer Gets Some Dodgy Solicitation
+wordpress_id: 705
+categories:
+- rants
+tags:
+- domains
+---
+
+The other day I got a letter from the 'Domain Registry of Canada', telling me that one of my domains was expiring soon, along with a handy renewal form for me to fill out.
+
+There are several problems with this.
+
+First and foremost, I'm not a customer of the 'Domain Registry of Canada'. Despite appearances, they're not an official body either. What they've done is scraped my info from the whois data and generated this solicitation letter. Once you take the time to actually read the thing this becomes apparent, but I have a huge problem with the fact that they've dressed it up as an official document. I've uploaded a copy below so you can see for yourself.
+
+Oh, and their prices SUCK.
+
+[![](/a/2011-08-01-705/001-743x1024.jpg)](http://theflyingdeveloper.com/blog/wp-content/uploads/2011/07/001.jpg)

@@ -1,0 +1,38 @@
+---
+comments: true
+date: 2012-02-27 10:00:29
+layout: post
+slug: '951'
+title: Dashboard Update
+wordpress_id: 951
+categories:
+- news
+- projects
+tags:
+- dashboard
+- ferrets
+- flickr
+- geckoboard
+---
+
+[Previously](http://theflyingdeveloper.com/geckoboard-weather-widget-wot-i-made) I wrote about creating a weather widget for [Geckoboard](http://geckoboard.com). Here's the current state of things:[![](/a/2012-02-27-951/Default-dashboard-Sousbois-Read-Only-Mode.jpg)](http://theflyingdeveloper.com/blog/wp-content/uploads/2012/02/Default-dashboard-Sousbois-Read-Only-Mode.jpg)
+
+
+
+	
+  1. **Calendar**: Built in widget, with custom text size to make it more readable
+
+	
+  2. **Date and Time**: Another built in widget.
+
+	
+  3. **Weather**: Covered [last time](http://theflyingdeveloper.com/geckoboard-weather-widget-wot-i-made), it takes weather info from Yahoo and displays it.
+
+	
+  4. **ToDo List**: A placeholder for now, but will display a particular shared note from Evernote that we can fill with important things we need to do.
+
+	
+  5. **Weasels!**: Geckoboard has an image widget, so I wrote an endpoint that looks like a  jpeg but fetches a random image from a person's Flickr photostream and returns it. Every time the board refreshes, Tada! New image. In our case, it's usually [embroidery or ferrets](http://www.flickr.com/photos/kimstitch).
+
+
+

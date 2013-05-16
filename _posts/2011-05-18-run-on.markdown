@@ -1,0 +1,20 @@
+---
+comments: true
+date: 2011-05-18 10:00:33
+layout: post
+slug: run-on
+title: Run On
+wordpress_id: 541
+categories:
+- news
+tags:
+- android
+- app
+- carson brown
+- mobile
+- running
+---
+
+A good friend of mine named [Carson Brown](http://twitter.com/#!/carson_) just released his first app on the Android Market under the Inflatable Apps umbrella. Called Run On, it is designed to read out text messages (and who sent them) as they arrive if you're doing something else such as running, cycling, or driving. [Here's the homepage for the app](http://inflatableapps.com/apps/run-on/), go check it out!
+
+

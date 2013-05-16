@@ -1,0 +1,19 @@
+---
+comments: true
+date: 2009-11-26 20:27:41
+layout: post
+slug: limelight-v0-3
+title: Limelight v0.3
+wordpress_id: 197
+categories:
+- limelight
+tags:
+- adobe AIR
+- api
+- lighthouse
+- limelight
+---
+
+Here's a new version of the Limelight app! The name is now changed, and it has a new icon.
+
+In terms of functionality, I've updated the API requests to grab all the tickets for a project, instead of just the first 'page'.
