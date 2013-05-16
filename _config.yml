@@ -1,21 +1,20 @@
-title:            Scribble
-description:      A jekyll theme. Because I scribble.
-url:              # Site url.
-signoff:          # Your name.
-disqus_shortname: # disqus comment thread for post header options. ( leave blank if unwanted. )
+title:            The Flying Developer
+description:      My ongoing adventures
+url:              http://theflyingdeveloper.com
+signoff:          David
+disqus_shortname: theflyingdeveloper
 facebook_appid:   # appid for like button, remove from /_includes/share.html if unwanted.
-google_analytics: # set tracking, remove from /javascripts/basic.js if unwanted.
+google_analytics: UA-37972623-1
 
 links:
-  - name:         Blog
-    url:          http://muan.co
-  - name:         Email
-    url:          mailto:hello@muan.co
+  - name:         Twitter
+    url:          http://twitter.com/davefp
   - name:         GitHub
-    url:          http://github.com/muan
+    url:          http://github.com/davefp
+  - name:         Contact
+    url:          mailto:david@theflyingdeveloper.com
 
-auto:             true
-permalink:        pretty
+permalink:        :title
 markdown:         rdiscount
 rdiscount:
   extensions:     [smart]
