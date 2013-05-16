@@ -3,8 +3,10 @@ layout: page
 title: about
 ---
 
-Give people something to read and get to know you. Here's my attempt: this is [Mu-An](http://muan.co), a designer developer who lives in London at the moment. 
+Hi. I'm David. I've been many things: Developer, Advocate, and now Headhunter.
 
-Tweet at [@muanchiou](http://twitter.com/muanchiou), read my code on [GitHub](http://github.com/muan), see my designs on [Dribbble](http://dribbble.com/muan), find my CV on [LinkedIn](http://uk.linkedin.com/in/muanchiou).
+Originally from the UK, I now live and work in Ottawa, Canada.
 
-This theme is made by me. You have a nice day. ♥
+I play a lot of boardgames, and in my spare time I'm building [meeple.me](http://meeple.me) to help facilitate that.
+
+During the day I work at [Shopify](http://shopify.com), where I find the best and brightest developers and tell them they want a job with us.
