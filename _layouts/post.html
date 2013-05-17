@@ -21,13 +21,13 @@
 
         </section>
       </div>
-      {% if page.share == 'y' %}
+      {% unless page.share == 'n' %}
         {% include share.html %}
-      {% endif %}
+      {% endunless %}
 
-      {% if page.disqus == 'y' %}
+      {% unless page.disqus == 'n' %}
         {% include disqus.html %}
-      {% endif %}
+      {% endunless %}
       {% include links.html %}
     </div>
     {% include footer.html %}
