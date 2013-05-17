@@ -19,8 +19,7 @@ I don't know what stack IceBox is running behind the scenes, but I'm going to sh
 
 <!-- more -->
 
-URLs
-----
+##URLs
 
 A lot of the time, you want to make resources available at a specific URL. Blog posts, wiki pages, or any other browsable resource. Should users be browsable? Probably not.
 
@@ -32,8 +31,7 @@ Rails supports the use of sigular resources to solve this exact problem. Instead
 
 Whenever a user hits one of these singular resources, it's up to the app to decide which resource gets loaded. Which brings us neatly to...
 
-Authorization
--------------
+##Authorization
 
 Security revolves around two things: Authentication and authorization. These terms are often used interchangably, but there are important differences. In laymans terms:
 
@@ -84,10 +82,7 @@ end
 
 We can leave the show method empty and the @user variable gets passed to our view for display. Yay! Now people can only access their own accounts.
 
-Conclusion
----
-
--------
+##Conclusion
 
 The IceBox example is a real-world case demonstrating what can happen when you rush the deployment of your app.
 
