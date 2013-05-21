@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Your Git Commit Email is Public"
+title: "Remember: Your Git Commit Email is Public"
 date: 2013-05-21 10:51
 comments: true
 categories:
