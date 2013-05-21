@@ -21,3 +21,5 @@ Now here's my recent public activity: [https://api.github.com/users/davefp/event
 If you browse the JSON you'll actually get two addresses of mine: My personal email (davefp@gmail.com) and my work address (david.underwood@jadedpixel.com).
 
 I'm not concerned with who has my email address. [I consider it to be public info anyway](http://theflyingdeveloper.com/why-i-dont-obfuscate-my-email/). But if you don't want all and sundry reading yours, consider using a fake address in your git identity.
+
+__Update:__ [vsbuffalo](https://news.ycombinator.com/item?id=5745051) on [Hacker News](https://news.ycombinator.com/item?id=5744736) points out that GitHub has a help page to help you configure your commit email if you so desire: [https://help.github.com/articles/keeping-your-email-address-private]()
