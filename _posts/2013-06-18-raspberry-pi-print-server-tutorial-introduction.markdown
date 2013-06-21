@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Raspberry Pi Print Server Tutorial: Introduction"
-date: 2013-08-18 15:01
+date: 2013-06-18 15:01
 comments: true
 categories:
 ---
@@ -20,6 +20,6 @@ I'm going to document the process, and put it up here as a three-part guide for 
 
 I'll add the links to the various parts as they're written, so check back here for updates. The first one should be going up later this week.
 
-* __Part 1__: Initial setup, installing and configuring CUPS
+* __Part 1__: [Initial setup, installing and configuring CUPS](/raspberry-pi-print-server-tutorial-part-1)
 * __Part 2__: Adding a printer, printing something
 * __Part 3__: AirPlay support, printing from an iPad
