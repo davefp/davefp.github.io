@@ -3,10 +3,12 @@ layout: page
 title: about
 ---
 
-Hi. I'm David. I've been many things: Developer, Advocate, and now Headhunter.
+Hi. I'm David. I've been many things: Developer, Advocate, Headhunter.
+
+Most of my personal projects are open-source and can be found on [my GitHub profile](http://github.com/davefp).
 
 Originally from the UK, I now live and work in Ottawa, Canada.
 
-I play a lot of boardgames, and in my spare time I'm building [meeple.me](http://meeple.me) to help facilitate that.
+I play a lot of games, both the [cardboard](http://boardgamegeek.com/collection/user/davefp) and [electronic](http://steamcommunity.com/id/davefp) variety.
 
-During the day I work at [Shopify](http://shopify.com), where I find the best and brightest developers and tell them they want a job with us.
+I'm currently searching for a full-time developer position. Preferably Rails, perferably in Ottawa. If I'm the kind of dev you want on your team, drop me a line [david@theflyingdeveloper.com](mailto:david@theflyingdeveloper.com)
