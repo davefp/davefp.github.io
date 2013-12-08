@@ -3,7 +3,7 @@ layout: page
 title: about
 ---
 
-Hi. I'm David. I've been many things: Developer, Advocate, Headhunter.
+Hi. I'm David. I've been many things: Developer, Advocate, Headhunter, tutor.
 
 Most of my personal projects are open-source and can be found on [my GitHub profile](http://github.com/davefp).
 
