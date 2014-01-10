@@ -22,5 +22,6 @@ links:
 
 permalink:        :title
 markdown:         rdiscount
+pygments:         true
 rdiscount:
   extensions:     [smart]
