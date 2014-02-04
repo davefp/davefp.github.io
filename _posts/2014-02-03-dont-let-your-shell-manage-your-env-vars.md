@@ -16,7 +16,7 @@ Not done. It turned out that because I was defining my env vars in my `.bashrc` 
 
 Fortunately, there are a number of gems out there to help you with this problem.
 
-Dotenv (https://github.com/bkeepers/dotenv) and Figaro (https://github.com/laserlemon/figaro) are very similar gems that both provide the ability to add environment variables in a config file. They parse said file during app initialization and load the stored variables into the `ENV` hash.
+Dotenv (<https://github.com/bkeepers/dotenv>) and Figaro (<https://github.com/laserlemon/figaro>) are very similar gems that both provide the ability to add environment variables in a config file. They parse said file during app initialization and load the stored variables into the `ENV` hash.
 
 The main concrete difference I can see (aside from using differently named yml files) is that Figaro allows you to access ENV vars via the `Figaro.env` object as well as the `ENV` hash. The argument here is that it's easier to stub out `Figaro.env` than a raw hash during testing.
 
