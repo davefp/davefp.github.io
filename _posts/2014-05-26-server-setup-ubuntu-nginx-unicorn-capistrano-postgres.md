@@ -123,7 +123,9 @@ deploy@remote $ gem install bundler
 
 Create Devise secret key
 
+```bash
 deploy@remote $ echo "DEVISE_SECRET_KEY=xxxxxxxxxxxxx" >> ~/apps/<app-name>/shared/.env
+```
 
 Create other environment variables in the same fashion (Rails secret, API keys, etc.)
 
