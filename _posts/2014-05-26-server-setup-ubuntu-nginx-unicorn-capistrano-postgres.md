@@ -184,6 +184,160 @@ server {
 }
 ```
 
+## Deployment config
+
+Capfile:
+
+```ruby
+require 'capistrano/setup'
+
+require 'capistrano/deploy'
+
+require 'capistrano/rbenv'
+
+require 'capistrano/rails'
+
+require 'capistrano3/unicorn'
+
+Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }
+```
+
+deploy.rb:
+
+```ruby
+# config valid only for Capistrano 3.1
+lock '3.2.1'
+
+set :application, 'app-name'
+set :repo_url, 'git@wherever.git'
+
+set :linked_files, %w{config/database.yml .env}
+set :linked_dirs, %w{tmp/pids}
+
+set :unicorn_config_path, "config/unicorn.rb"
+
+set :rbenv_type, :user # or :system, depends on your rbenv setup
+set :rbenv_ruby, '2.1.1'
+set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
+set :rbenv_map_bins, %w{rake gem bundle ruby rails}
+set :rbenv_roles, :all # default value
+
+namespace :deploy do
+
+  desc 'Restart application'
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      invoke 'unicorn:restart'
+    end
+  end
+
+  after :publishing, :restart
+
+  after :restart, :clear_cache do
+    on roles(:web), in: :groups, limit: 3, wait: 10 do
+      # Here we can do anything such as:
+      # within release_path do
+      #   execute :rake, 'cache:clear'
+      # end
+    end
+  end
+
+end
+```
+
+production.rb:
+
+```ruby
+set :stage, :production
+
+set :deploy_to, '~/apps/app-name'
+
+set :branch, 'master'
+
+set :rails_env, 'production'
+
+# Simple Role Syntax
+# ==================
+# Supports bulk-adding hosts to roles, the primary
+# server in each group is considered to be the first
+# unless any hosts have the primary property set.
+role :app, %w{deploy@app-host}
+role :web, %w{deploy@app-host}
+role :db,  %w{deploy@app-host}
+```
+
+unicorn.rb:
+
+```ruby
+# Set environment to development unless something else is specified
+env = ENV["RAILS_ENV"] || "development"
+
+
+# Production specific settings
+if env == "production"
+  app_dir = "app-name"
+  worker_processes 4
+end
+
+# listen on both a Unix domain socket and a TCP port,
+# we use a shorter backlog for quicker failover when busy
+listen "/tmp/unicorn.#{app_dir}.socket", :backlog => 64
+
+# Preload our app for more speed
+preload_app true
+
+# nuke workers after 30 seconds instead of 60 seconds (the default)
+timeout 30
+
+# Help ensure your application will always spawn in the symlinked
+# "current" directory that Capistrano sets up.
+working_directory "/home/deploy/apps/#{app_dir}/current"
+
+# feel free to point this anywhere accessible on the filesystem
+user 'deploy', 'deploy'
+shared_path = "/home/deploy/apps/#{app_dir}/shared"
+
+stderr_path "#{shared_path}/log/unicorn.stderr.log"
+stdout_path "#{shared_path}/log/unicorn.stdout.log"
+
+pid "#{shared_path}/tmp/pids/unicorn.pid"
+
+
+before_fork do |server, worker|
+  # the following is highly recomended for Rails + "preload_app true"
+  # as there's no need for the master process to hold a connection
+  if defined?(ActiveRecord::Base)
+    ActiveRecord::Base.connection.disconnect!
+  end
+
+  # Before forking, kill the master process that belongs to the .oldbin PID.
+  # This enables 0 downtime deploys.
+  old_pid = "#{shared_path}/pids/unicorn.pid.oldbin"
+  if File.exists?(old_pid) && server.pid != old_pid
+    begin
+      Process.kill("QUIT", File.read(old_pid).to_i)
+    rescue Errno::ENOENT, Errno::ESRCH
+      # someone else did our job for us
+    end
+  end
+end
+
+after_fork do |server, worker|
+  # the following is *required* for Rails + "preload_app true",
+  if defined?(ActiveRecord::Base)
+    ActiveRecord::Base.establish_connection
+  end
+end
+```
+
+## Deploy!
+
+You should now be able to deploy your app:
+
+```bash
+user@local $ cap production deploy
+```
+
 ## Required packages
 
 * **curl** - HTTP tool. Used by all sorts of things
