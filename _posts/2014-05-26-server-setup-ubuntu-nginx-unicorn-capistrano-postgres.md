@@ -72,6 +72,25 @@ root@remote $ sudo -u postgres createuser --superuser deploy
 root@remote $ sudo -u postgres create database <db-name>
 ```
 
+## Install rbenv (and ruby-build)
+
+[Source](https://github.com/sstephenson/rbenv#installation)
+
+```bash
+deploy@remote $ git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+deploy@remote $ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+deploy@remote $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+deploy@remote $ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+```
+
+Restart your shell.
+
+Install a ruby:
+
+```bash
+deploy@remote $ rbenv install <favourite-ruby-version>
+```
+
 ## Set up app server-side
 
 Make all the dirs
