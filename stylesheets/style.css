@@ -311,6 +311,12 @@ section.post, section > p {
     section.post img.half, section > p img.half {
       width: 50%; }
 
+.video-embed {
+  padding: 0 !important;
+  height: 330;
+  width: 100%;
+}
+
 .paging a {
   opacity: 0.15; }
 .paging a:hover {

@@ -6,6 +6,12 @@ comments: true
 categories:
 ---
 
+**Update**: I gave a talk on this subject at the June 2014 meetup of [Ottawa Ruby](http://ottawaruby.ca). I've embedded the screencast below (sorry about the poor audio in places):
+
+<iframe class="video-embed" src="//www.youtube.com/embed/4j0CmcTTjZc" frameborder="0" allowfullscreen></iframe>
+
+**Original Post**
+
 Whenever you generate a controller in Rails, you're given (amongst other things) a couple of asset files:
 
 ```
